@@ -241,6 +241,11 @@
 
   /* ── DESKTOP ── */
   @media(max-width:759px){
+    /* Let hero be content-height on mobile — no viewport lock */
+    .hero{height:auto;grid-template-rows:auto auto}
+    .hero-left{justify-content:flex-start;padding-top:52px;padding-bottom:52px;min-height:0}
+    .hero-right{height:80vw}  /* generous portrait strip below the copy */
+    /* Font + spacing tuning */
     .hero-hl{font-size:clamp(2.55rem,9.5vw,3.6rem)}
     .hero-hl br{display:none}
     .hero-eyebrow{margin-bottom:16px}
@@ -764,7 +769,9 @@
   /* ── Photo ── */
   .atty-photo{
     position:relative;overflow:hidden;
-    min-height:72vw;background:var(--navy-deep);
+    min-height:0;
+    aspect-ratio:4/5;   /* portrait proportion on mobile */
+    background:var(--navy-deep);
   }
   .atty-photo img{
     position:absolute;inset:0;
@@ -814,8 +821,8 @@
 
   /* Key differentiator stat */
   .atty-stat{
-    margin-bottom:24px;
-    padding-top:20px;
+    margin-bottom:0;
+    padding-top:24px;
     border-top:1.5px solid;
     border-image:linear-gradient(90deg,#B5943A,#E8D080 50%,#B5943A) 1;
   }
@@ -830,18 +837,27 @@
   }
   .atty-stat-note{
     font-size:.92rem;color:var(--muted);
-    margin-top:12px;line-height:1.6;max-width:none;
+    margin-top:10px;line-height:1.55;max-width:none;
+    margin-bottom:0;
+  }
+  /* Credential sub-note — AEP + JD below the stat */
+  .atty-cred-note{
+    font-size:.88rem;color:var(--muted);
+    line-height:1.65;margin-top:20px;
+    padding-top:20px;
+    border-top:1px solid var(--line);
+    margin-bottom:32px;
   }
 
   /* Bio */
   .atty-desc{
     font-size:1rem;color:var(--ink);
-    line-height:1.68;max-width:48ch;
-    margin-bottom:28px;flex-grow:1;
+    line-height:1.72;max-width:48ch;
+    margin-bottom:36px;
   }
 
   /* Credential list */
-  .atty-bars{list-style:none;border-top:1px solid var(--line);margin-bottom:28px}
+  .atty-bars{list-style:none;border-top:1px solid var(--line);margin-top:0;margin-bottom:28px}
   .atty-bar{
     font-size:.9rem;color:var(--muted);
     padding:9px 0 9px 18px;
@@ -1304,6 +1320,11 @@
 
   /* ── DESKTOP ── */
   @media(max-width:759px){
+    /* Let hero be content-height on mobile — no viewport lock */
+    .hero{height:auto;grid-template-rows:auto auto}
+    .hero-left{justify-content:flex-start;padding-top:52px;padding-bottom:52px;min-height:0}
+    .hero-right{height:80vw}  /* generous portrait strip below the copy */
+    /* Font + spacing tuning */
     .hero-hl{font-size:clamp(2.55rem,9.5vw,3.6rem)}
     .hero-hl br{display:none}
     .hero-eyebrow{margin-bottom:16px}
@@ -1827,7 +1848,9 @@
   /* ── Photo ── */
   .atty-photo{
     position:relative;overflow:hidden;
-    min-height:72vw;background:var(--navy-deep);
+    min-height:0;
+    aspect-ratio:4/5;   /* portrait proportion on mobile */
+    background:var(--navy-deep);
   }
   .atty-photo img{
     position:absolute;inset:0;
@@ -1877,8 +1900,8 @@
 
   /* Key differentiator stat */
   .atty-stat{
-    margin-bottom:24px;
-    padding-top:20px;
+    margin-bottom:0;
+    padding-top:24px;
     border-top:1.5px solid;
     border-image:linear-gradient(90deg,#B5943A,#E8D080 50%,#B5943A) 1;
   }
@@ -1893,18 +1916,27 @@
   }
   .atty-stat-note{
     font-size:.92rem;color:var(--muted);
-    margin-top:12px;line-height:1.6;max-width:none;
+    margin-top:10px;line-height:1.55;max-width:none;
+    margin-bottom:0;
+  }
+  /* Credential sub-note — AEP + JD below the stat */
+  .atty-cred-note{
+    font-size:.88rem;color:var(--muted);
+    line-height:1.65;margin-top:20px;
+    padding-top:20px;
+    border-top:1px solid var(--line);
+    margin-bottom:32px;
   }
 
   /* Bio */
   .atty-desc{
     font-size:1rem;color:var(--ink);
-    line-height:1.68;max-width:48ch;
-    margin-bottom:28px;flex-grow:1;
+    line-height:1.72;max-width:48ch;
+    margin-bottom:36px;
   }
 
   /* Credential list */
-  .atty-bars{list-style:none;border-top:1px solid var(--line);margin-bottom:28px}
+  .atty-bars{list-style:none;border-top:1px solid var(--line);margin-top:0;margin-bottom:28px}
   .atty-bar{
     font-size:.9rem;color:var(--muted);
     padding:9px 0 9px 18px;
@@ -2358,8 +2390,10 @@
     <!-- 2. CFP® stat (full width) — then AEP® + JD folded into note -->
     <div class="atty-stat">
       <span class="atty-stat-n">11</span>
-      <p class="atty-stat-note">years in trust company wealth management, earning the CFP® before law school. She also holds the Accredited Estate Planner® (AEP®) — a graduate-level estate specialization awarded by the National Association of Estate Planners &amp; Councils — and a JD from the University of Kentucky Law School.</p>
+      <p class="atty-stat-note">years in trust company wealth management, earning the CFP® before law school.</p>
     </div>
+
+    <p class="atty-cred-note">She also holds the Accredited Estate Planner® (AEP®) — a graduate-level estate specialization awarded by the National Association of Estate Planners &amp; Councils — and a JD from the University of Kentucky Law School.</p>
 
     <!-- 3. Memberships -->
     <ul class="atty-bars">
