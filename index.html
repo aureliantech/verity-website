@@ -288,13 +288,19 @@
   /* ---- Reasons strip ---- */
 
   /* ── Three full-bleed panels ── */
+  .reasons{
+    background:var(--paper);
+    padding:clamp(24px,3.5vw,48px) clamp(14px,3vw,44px);
+    display:flex;flex-direction:column;gap:8px;
+  }
   .r-row{
     position:relative;
     overflow:hidden;
+    border-radius:6px;
   }
   .r-inner{
     max-width:1180px;margin:0 auto;
-    padding:clamp(72px,8vw,112px) 28px;
+    padding:clamp(36px,4.5vw,60px) 28px;
     display:grid;
     grid-template-columns:1fr;
     gap:32px;
@@ -305,7 +311,7 @@
     position:absolute;
     right:-0.06em;top:50%;transform:translateY(-50%);
     font-family:"Zodiak","Fraunces",serif;font-weight:700;
-    font-size:min(40vw,55vh);
+    font-size:min(28vw,38vh);
     line-height:1;letter-spacing:-.04em;
     pointer-events:none;user-select:none;
     z-index:0;
@@ -316,8 +322,8 @@
   }
   .r-word{
     font-family:"Zodiak","Fraunces",serif;font-weight:700;
-    font-size:clamp(3.4rem,11vw,5.2rem);
-    line-height:.9;letter-spacing:-.03em;
+    font-size:clamp(1.9rem,6.5vw,2.8rem);
+    line-height:.92;letter-spacing:-.025em;
     margin:0;
   }
   .r-right{
@@ -327,12 +333,12 @@
   .r-icon{width:40px;height:40px;flex:0 0 auto}
   .r-icon svg{width:100%;height:100%;display:block;stroke-width:1.75}
   .r-body{
-    font-size:1.08rem;line-height:1.65;
-    max-width:38ch;
+    font-size:1rem;line-height:1.6;
+    max-width:36ch;
   }
 
   /* ── Panel 1 — White ── */
-  .rr-white{background:var(--paper);border-bottom:1px solid var(--line)}
+  .rr-white{background:var(--paper-2)}
   .rr-white .r-ghost{color:rgba(21,41,78,.045)}
   .rr-white .r-label{color:var(--crimson)}
   .rr-white .r-word{color:var(--navy)}
@@ -360,34 +366,34 @@
       grid-template-columns:1fr 1fr;
       gap:clamp(60px,8vw,120px);
       align-items:center;
-      padding-left:clamp(40px,7vw,88px);
-      padding-right:clamp(40px,7vw,88px);
+      padding-left:clamp(32px,5vw,64px);
+      padding-right:clamp(32px,5vw,64px);
     }
     .r-icon{width:52px;height:52px}
-    .r-word{font-size:clamp(4rem,7vw,8.5rem);line-height:.88}
-    .r-ghost{font-size:min(28vw,50vh)}
-    .r-body{font-size:1.12rem;max-width:32ch}
+    .r-word{font-size:clamp(2.4rem,4.2vw,5.2rem);line-height:.9}
+    .r-ghost{font-size:min(18vw,32vh)}
+    .r-body{font-size:1.02rem;max-width:30ch}
   }
 
   @media(min-width:1100px){
-    .r-inner{padding-left:88px;padding-right:88px}
+    .r-inner{padding-left:64px;padding-right:64px}
   }
 
   /* ---- Packages ---- */
 
-  .pkg{background:var(--paper)}
+  .pkg{background:var(--paper);padding:0 clamp(14px,3vw,44px) clamp(28px,4vw,52px)}
 
   /* ── Section intro ── */
   .pkg-intro{
     max-width:780px;margin:0 auto;
-    padding:clamp(56px,7vw,96px) 28px clamp(44px,5vw,72px);
+    padding:clamp(36px,5vw,64px) 28px clamp(28px,3.5vw,48px);
     text-align:center;
   }
   .pkg-intro .eyebrow{color:var(--crimson);margin-bottom:16px}
   .pkg-h2{
     font-family:"Zodiak","Fraunces",serif;font-weight:700;
-    font-size:clamp(2rem,3.6vw,3.2rem);
-    color:var(--navy);line-height:1.08;letter-spacing:-.02em;
+    font-size:clamp(1.7rem,2.8vw,2.5rem);
+    color:var(--navy);line-height:1.1;letter-spacing:-.02em;
     margin-bottom:16px;
   }
   .pkg-intro-sub{font-size:1.08rem;color:var(--muted)}
@@ -395,11 +401,13 @@
   /* ── Three-panel grid ── */
   .pkg-grid{
     display:grid;
-    grid-template-columns:1fr;  /* mobile: stack */
+    grid-template-columns:1fr;
+    border-radius:8px;
+    overflow:hidden;
   }
   .pkg-col{
     display:flex;flex-direction:column;
-    padding:clamp(48px,6vw,72px) 28px clamp(44px,5vw,64px);
+    padding:clamp(32px,4.5vw,52px) 24px clamp(28px,4vw,44px);
     position:relative;overflow:hidden;
   }
 
@@ -443,8 +451,8 @@
   /* ── Audience word ── */
   .pkg-word{
     font-family:"Zodiak","Fraunces",serif;font-weight:700;
-    font-size:clamp(3rem,10vw,4rem);
-    line-height:.9;letter-spacing:-.03em;
+    font-size:clamp(1.8rem,6.5vw,2.8rem);
+    line-height:.92;letter-spacing:-.025em;
     margin-bottom:20px;
     position:relative;z-index:1;
   }
@@ -503,7 +511,7 @@
   .pk-dark .pkg-fee-label{color:var(--sage)}
   .pkg-fee{
     font-family:"Zodiak","Fraunces",serif;font-weight:700;
-    font-size:clamp(1.5rem,3vw,2.2rem);
+    font-size:clamp(1.25rem,2vw,1.8rem);
     line-height:1.1;
   }
   .pk-light .pkg-fee{color:var(--navy)}
@@ -531,15 +539,15 @@
   /* ── Desktop ── */
   @media(min-width:760px){
     .pkg-grid{grid-template-columns:1fr 1fr 1fr}
-    .pkg-col{padding:clamp(56px,5vw,80px) clamp(40px,4vw,64px) clamp(52px,4.5vw,72px)}
-    .pkg-word{font-size:clamp(3rem,4.5vw,5rem);line-height:.88}
-    .pkg-icon{width:64px;height:64px;margin-bottom:32px}
+    .pkg-col{padding:clamp(40px,4vw,60px) clamp(28px,3vw,48px) clamp(36px,3.5vw,52px)}
+    .pkg-word{font-size:clamp(2rem,2.8vw,3.4rem);line-height:.9}
+    .pkg-icon{width:52px;height:52px;margin-bottom:24px}
     .pkg-col::after{width:320px;height:320px;right:-60px}
   }
 
   @media(min-width:1100px){
-    .pkg-col{padding:88px 68px 76px}
-    .pkg-word{font-size:clamp(3.5rem,4.8vw,5.5rem)}
+    .pkg-col{padding:60px 52px 56px}
+    .pkg-word{font-size:clamp(2.2rem,3vw,3.8rem)}
   }
 
   /* ---- Process ---- */
