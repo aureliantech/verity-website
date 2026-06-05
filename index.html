@@ -550,25 +550,211 @@
     .pkg-word{font-size:clamp(2.2rem,3vw,3.8rem)}
   }
 
-  /* ---- Process ---- */
-  .process{background:var(--paper-2);border-top:1px solid var(--line);border-bottom:1px solid var(--line);padding:80px 0}
-  .steps{display:grid;grid-template-columns:repeat(3,1fr);gap:40px;margin-top:46px}
-  .step .n{font-family:"Zodiak","Fraunces",serif;font-size:2.4rem;color:var(--crimson);line-height:1}
-  .step h4{font-family:"Zodiak","Fraunces",serif;font-size:1.3rem;font-weight:500;color:var(--navy);margin:10px 0 8px}
-  .step p{color:var(--muted);font-size:1rem;line-height:1.6}
-  @media(max-width:760px){.steps{grid-template-columns:1fr;gap:30px}}
 
   /* ---- Broader practice strip ---- */
-  .practice{padding:78px 0;background:var(--navy);color:var(--paper);position:relative;z-index:2}
-  .practice .eyebrow{color:var(--accent-light)}
-  .practice h2{font-size:clamp(1.7rem,3.2vw,2.2rem);font-weight:500;margin:14px 0 8px;max-width:26ch}
-  .practice .intro{color:var(--on-navy);max-width:56ch;margin-bottom:46px;font-size:1.08rem;line-height:1.6}
-  .pracgrid{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:var(--line-navy);border:1px solid var(--line-navy)}
-  .prac{background:var(--navy);padding:32px 28px}
-  .prac h4{font-family:"Zodiak","Fraunces",serif;font-size:1.3rem;font-weight:500;color:var(--paper);margin-bottom:10px}
-  .prac p{color:var(--on-navy);font-size:1rem;line-height:1.6}
-  .prac .stat{display:block;margin-top:14px;font-family:"Zodiak","Fraunces",serif;color:#E6A0A8;font-size:1rem}
-  @media(max-width:760px){.pracgrid{grid-template-columns:1fr}}
+
+  .practice{
+    background:var(--paper);
+    border-top:1px solid var(--line);
+    border-bottom:1px solid var(--line);
+    padding:clamp(52px,6vw,88px) 0;
+  }
+  .ps-inner{
+    max-width:1180px;margin:0 auto;
+    padding:0 clamp(20px,4vw,88px);
+  }
+
+  /* ── Head ── */
+  .ps-head{
+    display:grid;grid-template-columns:1fr;
+    gap:12px;
+    margin-bottom:clamp(36px,5vw,60px);
+  }
+  .ps-eyebrow{color:var(--crimson)}
+  .ps-h2{
+    font-family:"Zodiak","Fraunces",serif;font-weight:700;
+    font-size:clamp(1.7rem,3.2vw,2.4rem);
+    color:var(--navy);line-height:1.06;letter-spacing:-.02em;
+    max-width:20ch;
+  }
+  .ps-lead{
+    font-size:1rem;color:var(--muted);
+    line-height:1.65;max-width:46ch;
+  }
+
+  /* ── Rows ── */
+  .ps-rows{border-top:1px solid var(--line)}
+
+  .ps-row{
+    display:grid;grid-template-columns:1fr;
+    gap:20px;
+    padding:clamp(28px,3.5vw,44px) 0;
+    border-bottom:1px solid var(--line);
+    position:relative;
+  }
+
+  .ps-num{
+    display:flex;align-items:center;gap:10px;
+    font-size:.68rem;letter-spacing:.22em;text-transform:uppercase;
+    font-weight:600;color:var(--crimson);
+    margin-bottom:8px;
+  }
+  .ps-num::before{
+    content:"";flex:0 0 auto;
+    width:24px;height:2px;background:var(--crimson);
+  }
+  .ps-name{
+    font-family:"Zodiak","Fraunces",serif;font-weight:700;
+    font-size:clamp(1.4rem,2.8vw,1.9rem);
+    color:var(--navy);line-height:1.08;letter-spacing:-.015em;
+  }
+  .ps-desc{
+    font-size:1rem;color:var(--muted);
+    line-height:1.65;max-width:44ch;
+  }
+
+  /* Stat block — business row */
+  .ps-stat{
+    margin-top:clamp(24px,3vw,36px);
+  }
+  .ps-stat-n{
+    font-family:"Zodiak","Fraunces",serif;font-weight:700;
+    font-size:clamp(2.4rem,4vw,3.6rem);
+    color:var(--navy);line-height:.88;letter-spacing:-.03em;
+  }
+  .ps-stat-note{
+    font-size:.9rem;color:var(--muted);
+    line-height:1.55;margin-top:10px;max-width:28ch;
+  }
+
+  /* ── Desktop: two-column rows ── */
+  @media(min-width:760px){
+    .ps-head{
+      grid-template-columns:1fr 1fr;
+      align-items:end;
+    }
+    .ps-head-right{display:flex;flex-direction:column;justify-content:flex-end}
+    .ps-row{
+      grid-template-columns:1fr 1.5fr;
+      gap:clamp(40px,6vw,96px);
+      align-items:start;
+    }
+    .ps-name{font-size:clamp(1.5rem,2.2vw,2.1rem)}
+    .ps-desc{font-size:1.02rem}
+  }
+
+  @media(min-width:1100px){
+    .ps-inner{padding-left:88px;padding-right:88px}
+  }
+
+  /* ---- Process ---- */
+
+  .process{
+    background:var(--navy);
+    padding:clamp(52px,6vw,88px) 0;
+    overflow:hidden;
+  }
+  .proc-inner{
+    max-width:1180px;margin:0 auto;
+    padding:0 clamp(20px,4vw,88px);
+  }
+
+  /* ── Head ── */
+  .proc-head{margin-bottom:clamp(44px,5vw,64px)}
+  .proc-ey{color:var(--accent-light)}
+  .proc-h2{
+    font-family:"Zodiak","Fraunces",serif;font-weight:700;
+    font-size:clamp(2.6rem,8vw,4.5rem);
+    color:#fff;line-height:.88;letter-spacing:-.03em;
+    margin-top:14px;
+  }
+  .proc-sub{
+    font-size:1.02rem;color:var(--on-navy);
+    margin-top:16px;line-height:1.6;max-width:38ch;
+  }
+
+  /* ── Steps ── */
+  .proc-steps{
+    display:grid;
+    grid-template-columns:1fr;
+    gap:0;
+  }
+  .proc-step{
+    position:relative;
+    overflow:hidden;
+    padding:clamp(32px,4vw,48px) 0;
+    border-bottom:1px solid rgba(255,255,255,.1);
+  }
+  .proc-step:last-child{border-bottom:none}
+
+  /* Ghost ordinal */
+  .proc-ghost{
+    position:absolute;
+    right:-0.04em;top:50%;transform:translateY(-50%);
+    font-family:"Zodiak","Fraunces",serif;font-weight:700;
+    font-size:min(36vw,32vh);
+    color:rgba(255,255,255,.04);
+    line-height:1;letter-spacing:-.04em;
+    pointer-events:none;user-select:none;z-index:0;
+  }
+  .proc-content{position:relative;z-index:1}
+
+  /* Number label */
+  .proc-num{
+    display:inline-flex;align-items:center;gap:9px;
+    font-size:.68rem;letter-spacing:.22em;text-transform:uppercase;
+    font-weight:600;color:var(--crimson-soft);
+    margin-bottom:14px;
+  }
+  .proc-num::before{
+    content:"";width:22px;height:2px;
+    background:var(--crimson);flex:0 0 auto;
+  }
+
+  .proc-title{
+    font-family:"Zodiak","Fraunces",serif;font-weight:700;
+    font-size:clamp(2rem,6vw,2.8rem);
+    color:#fff;line-height:.9;letter-spacing:-.025em;
+    margin-bottom:18px;
+  }
+  .proc-body{
+    font-size:1rem;color:var(--on-navy);
+    line-height:1.65;max-width:34ch;
+  }
+
+  /* ── Desktop: three columns ── */
+  @media(min-width:760px){
+    .proc-steps{
+      grid-template-columns:1fr 1fr 1fr;
+      gap:0 1px;
+      background:rgba(255,255,255,.1);  /* 1px gap shows as thin separator */
+      border-top:1px solid rgba(255,255,255,.1);
+      margin-top:0;
+    }
+    .proc-step{
+      background:var(--navy);
+      border-bottom:none;
+      padding:clamp(44px,5vw,64px) clamp(28px,4vw,52px);
+    }
+    .proc-step:first-child{padding-left:0}
+    .proc-step:last-child{padding-right:0}
+    .proc-ghost{font-size:min(13vw,20vh)}
+    .proc-title{font-size:clamp(2.2rem,3.5vw,3rem)}
+    .proc-head{
+      display:grid;
+      grid-template-columns:1fr 1fr;
+      gap:0 clamp(40px,6vw,96px);
+      align-items:end;
+    }
+    .proc-h2{font-size:clamp(2.6rem,4.2vw,4rem)}
+  }
+
+  @media(min-width:1100px){
+    .proc-inner{padding-left:88px;padding-right:88px}
+    .proc-step{padding:72px 52px}
+    .proc-step:first-child{padding-left:0}
+    .proc-step:last-child{padding-right:0}
+  }
 
   /* ---- Attorney bio ---- */
   .attorney{padding:92px 0}
@@ -799,48 +985,103 @@
 </section>
 
 <section class="practice" id="practice">
-  <div class="wrap">
-    <span class="eyebrow">Beyond the estate plan</span>
-    <h2>One firm for the whole arc of a family's wealth.</h2>
-    <p class="intro">Plans rarely stay simple. When the time comes to settle an estate, pass down a business, or sort out finances around a marriage, the same office that drafted your plan is the one that carries it out.</p>
-    <div class="pracgrid">
-      <div class="prac">
-        <h4>Probate &amp; Trust Administration</h4>
-        <p>Guiding executors and trustees through every fiduciary duty in Missouri estates — independent or supervised — and protecting those who can't protect themselves: minors, the elderly, and special-needs beneficiaries.</p>
+  <div class="ps-inner">
+
+    <div class="ps-head">
+      <div class="ps-head-left">
+        <span class="eyebrow ps-eyebrow">Practice areas</span>
+        <h2 class="ps-h2">One firm.<br>Every stage.</h2>
       </div>
-      <div class="prac">
-        <h4>Business &amp; Succession Planning</h4>
-        <p>Formation, buy-sell agreements, ownership structure, and the succession plan that keeps a company in the family rather than lost at the founder's death.</p>
-        <span class="stat">Fewer than 35% of family businesses reach the second generation.</span>
+      <div class="ps-head-right">
+        <p class="ps-lead">Plans rarely stay simple. Whatever comes next&nbsp;— settling an estate, passing a business, navigating a marriage&nbsp;— the same office handles it.</p>
       </div>
-      <div class="prac">
-        <h4>Marital Planning</h4>
-        <p>Prenuptial and cohabitation agreements, marital trusts, and clear-eyed financial planning through marriage, separation, or divorce.</p>
+    </div>
+
+    <div class="ps-rows">
+
+      <!-- 01 — Probate -->
+      <div class="ps-row">
+        <div class="ps-row-left">
+          <div class="ps-num">01</div>
+          <h3 class="ps-name">Probate &amp; Trust<br>Administration</h3>
+        </div>
+        <div class="ps-row-right">
+          <p class="ps-desc">Guiding executors and trustees through every fiduciary duty in Missouri&nbsp;— independent or supervised&nbsp;— and protecting those who cannot protect themselves: minors, the elderly, and special-needs beneficiaries.</p>
+        </div>
       </div>
+
+      <!-- 02 — Business -->
+      <div class="ps-row">
+        <div class="ps-row-left">
+          <div class="ps-num">02</div>
+          <h3 class="ps-name">Business &amp;<br>Succession Planning</h3>
+          <div class="ps-stat">
+            <div class="ps-stat-n">35%</div>
+            <p class="ps-stat-note">of family businesses reach the second generation.</p>
+          </div>
+        </div>
+        <div class="ps-row-right">
+          <p class="ps-desc">Formation, buy-sell agreements, and the succession plan that keeps a company in the family rather than lost at the founder's death. A succession plan changes those odds.</p>
+        </div>
+      </div>
+
+      <!-- 03 — Marital -->
+      <div class="ps-row">
+        <div class="ps-row-left">
+          <div class="ps-num">03</div>
+          <h3 class="ps-name">Marital<br>Planning</h3>
+        </div>
+        <div class="ps-row-right">
+          <p class="ps-desc">Prenuptial agreements, marital trusts, and clear-eyed financial planning through marriage, separation, or divorce.</p>
+        </div>
+      </div>
+
     </div>
   </div>
 </section>
 
 <section class="process" id="process">
-  <div class="wrap">
-    <span class="eyebrow">How it works</span>
-    <h2 class="serif" style="font-size:clamp(1.8rem,3.4vw,2.4rem);font-weight:500;color:var(--navy);margin-top:14px;max-width:22ch;">Three meetings from first call to signed plan.</h2>
-    <div class="steps">
-      <div class="step">
-        <div class="n">01</div>
-        <h4>We talk.</h4>
-        <p>A free consultation where we map your assets and your wishes, then quote a flat fee on the spot.</p>
+  <div class="proc-inner">
+
+    <div class="proc-head">
+      <div>
+        <span class="eyebrow proc-ey">How it works</span>
+        <h2 class="proc-h2">Three steps to a signed plan.</h2>
       </div>
-      <div class="step">
-        <div class="n">02</div>
-        <h4>We draft.</h4>
-        <p>You receive a plan written in plain English. We walk through every page until it reads the way you mean it.</p>
+      <div>
+        <p class="proc-sub">From first conversation to signed documents — each step explained before we move forward.</p>
       </div>
-      <div class="step">
-        <div class="n">03</div>
-        <h4>You sign &amp; fund.</h4>
-        <p>You sign with witnesses, and we help retitle your home and accounts — the step that makes a trust actually work.</p>
+    </div>
+
+    <div class="proc-steps">
+
+      <div class="proc-step">
+        <span class="proc-ghost" aria-hidden="true">01</span>
+        <div class="proc-content">
+          <div class="proc-num">01</div>
+          <h3 class="proc-title">We talk.</h3>
+          <p class="proc-body">A free conversation to understand your situation and walk through your options. You'll know exactly what's involved before we move forward.</p>
+        </div>
       </div>
+
+      <div class="proc-step">
+        <span class="proc-ghost" aria-hidden="true">02</span>
+        <div class="proc-content">
+          <div class="proc-num">02</div>
+          <h3 class="proc-title">We draft.</h3>
+          <p class="proc-body">Your plan arrives in plain English. We walk every page together until it says exactly what you intend.</p>
+        </div>
+      </div>
+
+      <div class="proc-step">
+        <span class="proc-ghost" aria-hidden="true">03</span>
+        <div class="proc-content">
+          <div class="proc-num">03</div>
+          <h3 class="proc-title">You sign &amp; fund.</h3>
+          <p class="proc-body">You sign with witnesses. We help retitle your home and accounts — the step most attorneys skip.</p>
+        </div>
+      </div>
+
     </div>
   </div>
 </section>
