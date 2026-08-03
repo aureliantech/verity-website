@@ -347,7 +347,8 @@ header.site.scrolled .brand img{ height:30px; }
 .mega-viewall svg{ width:12px; height:12px; color:var(--accent); opacity:.75; flex-shrink:0; }
 .mega-subhead{
   font-family:var(--sans); font-weight:700; font-size:.7rem; letter-spacing:.1em; text-transform:uppercase;
-  color:var(--accent); margin:22px 0 6px;
+  color:var(--slate); margin:20px 0 8px; padding-top:16px;
+  border-top:1px solid var(--line);
 }
 
 /* photographic feature card — closes out the mega menu */
