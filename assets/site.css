@@ -2252,25 +2252,26 @@ html.intro-seen .loading-screen{ display:none !important; }
 /* ===== NAELA membership badge ===== */
 /* service pages: NAELA joins the credential grid; the call cell becomes a full-width bar beneath */
 .cred-card.cred-naela{display:flex;align-items:center;justify-content:center;padding:18px 20px}
-.cred-card.cred-naela img{display:block;width:100%;max-width:170px;height:auto}
+.cred-card.cred-naela img{display:block;width:140px;max-width:100%;height:auto}
 .cred-grid .cred-cta-cell{grid-column:1 / -1}
 @media(min-width:640px){
   .cred-grid .cred-cta-cell{flex-direction:row;justify-content:space-between;text-align:left;padding:22px 28px}
   .cred-grid .cred-cta-cell p{max-width:none}
 }
 /* homepage bio: Past Chair and NAELA share one credential panel */
-.bio-credential--pair{display:grid;grid-template-columns:1.45fr 1fr;padding:0}
+.bio-credential--pair{display:grid;grid-template-columns:1fr auto;padding:0}
 .bio-cred-cell{position:relative;z-index:1;padding:24px 28px}
-.bio-cred-logo{display:flex;align-items:center;justify-content:center;border-left:1px solid rgba(185,154,91,.4)}
-.bio-cred-logo img{display:block;width:100%;max-width:168px;height:auto}
+.bio-cred-logo{display:flex;align-items:center;justify-content:center;padding:18px 28px;border-left:1px solid rgba(185,154,91,.4)}
+.bio-cred-logo img{display:block;width:132px;max-width:100%;height:auto}
 @media(max-width:640px){
   .bio-credential--pair{grid-template-columns:1fr}
   .bio-cred-cell{padding:22px 24px}
   .bio-cred-logo{border-left:0;border-top:1px solid rgba(185,154,91,.4);padding:22px 24px}
-  .bio-cred-logo img{max-width:160px}
+  .bio-cred-logo{justify-content:flex-start}
+  .bio-cred-logo img{width:128px}
 }
 /* attorney page timeline */
-.tl-logo{display:block;width:170px;height:auto;margin-top:12px}
+.tl-logo{display:block;width:140px;height:auto;margin-top:12px}
 /* footer seal */
 .footer-naela{display:block;width:140px;height:auto;margin-top:26px;padding-top:22px;border-top:1px solid rgba(185,154,91,.25);box-sizing:content-box}
 @media(max-width:640px){.footer-naela{width:130px}}
