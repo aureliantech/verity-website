@@ -621,6 +621,28 @@ svg text{font-family:var(--f)}
 /* No reserved space under the footer: the call bar hides at the close */
 @media (max-width:720px){body{padding-bottom:0!important}}
 html{background:#0B1830}
+/* Affiliations: Past Chair + NAELA membership */
+.legend{max-width:660px}
+.affil{display:grid;grid-template-columns:1.5fr 1fr;max-width:660px;margin-top:clamp(32px,3.6vw,48px);border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+.affil-i{display:flex;align-items:center;gap:16px;min-height:104px;padding:20px 28px 20px 0}
+.affil-i+.affil-i{padding:20px 0 20px 28px;border-left:1px solid var(--line)}
+.affil-i svg{width:34px;height:34px;flex:none;color:var(--gold)}
+.affil-i p{font-size:15.5px;line-height:1.4;color:var(--ink)}
+.affil-i b{display:block;font-weight:600;color:var(--navy)}
+.affil-i span{display:block;margin-top:2px}
+.affil-logo{justify-content:center}
+.affil-logo img{display:block;width:100%;max-width:176px;height:auto}
+.foot-mem{margin-top:26px;padding-top:22px;border-top:1px solid rgba(198,163,90,.35);max-width:300px}
+.foot-mem img{display:block;width:150px;height:auto}
+@media (max-width:720px){
+  .affil{grid-template-columns:1fr}
+  .affil-i{flex-direction:column;justify-content:center;text-align:center;gap:10px;min-height:0}
+  .affil-i,.affil-i+.affil-i{padding:24px 0;border-left:0}
+  .affil-i+.affil-i{border-top:1px solid var(--line)}
+  .affil-i svg{width:30px;height:30px}
+  .affil-logo img{max-width:160px}
+  .foot-mem img{width:136px}
+}
 </style>
 <link rel="preconnect" href="https://www.googletagmanager.com">
 <link rel="preconnect" href="https://cdn.callrail.com">
@@ -749,10 +771,15 @@ html{background:#0B1830}
         <div><p>30 years practicing law in Missouri</p><p>Accredited Estate Planner (AEP®)</p></div>
         <div><p>Certified Financial Planner (CFP®)</p><p>11 years in wealth management</p></div>
       </div>
-      <p class="honor">
-        <svg viewBox="0 0 40 48" fill="none" aria-hidden="true"><path d="M20 2 L37 8.4V21C37 32.6 29.8 41.8 20 45.8C10.2 41.8 3 32.6 3 21V8.4L20 2Z" stroke="currentColor" stroke-width="2"/><path d="M13 23l5 5 9-10" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg>
-        <span><b>Past Chair, Probate &amp; Trust Committee</b><br>Bar Association of Metropolitan St.&nbsp;Louis</span>
-      </p>
+      <div class="affil">
+        <div class="affil-i">
+          <svg viewBox="0 0 40 48" fill="none" aria-hidden="true"><path d="M20 2 L37 8.4V21C37 32.6 29.8 41.8 20 45.8C10.2 41.8 3 32.6 3 21V8.4L20 2Z" stroke="currentColor" stroke-width="2"/><path d="M13 23l5 5 9-10" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          <p><b>Past Chair, Probate &amp; Trust Committee</b><span>Bar Association of Metropolitan St.&nbsp;Louis</span></p>
+        </div>
+        <div class="affil-i affil-logo">
+          <img src="assets/img/naela-member.png" alt="Member, National Academy of Elder Law Attorneys (NAELA)" width="472" height="195" loading="lazy">
+        </div>
+      </div>
     </div>
   </div>
 </section>
@@ -830,7 +857,8 @@ html{background:#0B1830}
 <footer class="foot">
   <div class="w">
     <div class="foot-grid">
-      <div><p class="foot-name">Verity Law Firm, LLC<em>Peace of mind for the people you love.</em></p></div>
+      <div><p class="foot-name">Verity Law Firm, LLC<em>Peace of mind for the people you love.</em></p>
+        <div class="foot-mem"><img src="assets/img/naela-member-white.png" alt="Member, National Academy of Elder Law Attorneys (NAELA)" width="520" height="214" loading="lazy"></div></div>
       <div><h3>Olivette</h3><p>The Premier Building, Suite 207<br>9378 Olive Boulevard<br>Olivette, MO 63132<br>By appointment only</p></div>
       <div><h3>Saint Charles</h3><p>2085 Bluestone Drive<br>Saint Charles, MO 63303<br>By appointment only</p></div>
       <div><h3>Contact</h3><p><a href="tel:+16362140546">636-214-0546</a></p></div>
