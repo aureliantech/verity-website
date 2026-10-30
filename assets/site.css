@@ -2275,3 +2275,40 @@ html.intro-seen .loading-screen{ display:none !important; }
 /* footer seal */
 .footer-naela{display:block;width:140px;height:auto;margin-top:26px;padding-top:22px;border-top:1px solid rgba(185,154,91,.25);box-sizing:content-box}
 @media(max-width:640px){.footer-naela{width:130px}}
+
+/* ===== Blog ===== */
+.post-hero h1{max-width:22ch}
+.post-meta{margin-top:4px;font-family:var(--sans);font-size:.9rem;color:var(--slate);letter-spacing:.02em}
+.post-meta span{margin:0 10px;color:var(--gold)}
+.post-section{padding-top:clamp(24px,3vw,40px)}
+.post-body{max-width:700px;margin:0 auto;color:var(--ink,#0F1E3C)}
+.post-body p{font-family:var(--serif);font-size:1.12rem;line-height:1.8;color:#2A3650;margin:0 0 1.15em}
+.post-body .post-lead{font-size:1.28rem;line-height:1.7;color:var(--navy)}
+.post-body h2{font-family:var(--serif);font-weight:700;font-size:clamp(1.4rem,1.15rem + 1vw,1.85rem);line-height:1.25;color:var(--navy);margin:2.2em 0 .7em;padding-top:1.1em;border-top:1px solid rgba(185,154,91,.45)}
+.post-list{margin:.2em 0 1.4em;padding:0;list-style:none}
+.post-list li{position:relative;padding:.5em 0 .5em 1.6em;font-family:var(--serif);font-size:1.08rem;line-height:1.6;color:#2A3650;border-bottom:1px solid #E6E9F0}
+.post-list li::before{content:"";position:absolute;left:2px;top:1.05em;width:7px;height:7px;background:var(--gold);transform:rotate(45deg)}
+.post-q{padding:22px 26px;border-radius:10px;background:linear-gradient(155deg,#FBF6F1 0%,#F5E9E1 100%);box-shadow:inset 0 0 0 1px rgba(185,154,91,.4)}
+.post-q li{font-style:italic;color:var(--navy);border-bottom-color:rgba(185,154,91,.3)}
+.post-q li:last-child{border-bottom:0}
+.post-cta{margin:2.6em 0 2em;padding:28px 30px;border-radius:12px;background:var(--mist);box-shadow:inset 0 0 0 1px rgba(185,154,91,.35);text-align:center}
+.post-cta p{font-family:var(--sans);font-size:1rem;color:var(--slate);margin:0 auto 18px;max-width:44ch}
+.post-cta .post-cta-h{font-family:var(--serif);font-weight:700;font-size:1.3rem;color:var(--navy);margin-bottom:8px}
+.post-disclaimer{font-family:var(--sans)!important;font-size:.88rem!important;line-height:1.6!important;color:var(--slate)!important;font-style:italic;border-top:1px solid #E6E9F0;padding-top:18px}
+.post-grid{display:grid;grid-template-columns:1fr;gap:20px;max-width:900px;margin:0 auto}
+@media(min-width:800px){.post-grid{grid-template-columns:1fr 1fr}}
+.post-card{display:flex;flex-direction:column;gap:12px;padding:28px;border-radius:12px;background:var(--white,#fff);box-shadow:inset 0 0 0 1px rgba(185,154,91,.4),0 18px 34px -28px rgba(11,24,48,.35);text-decoration:none;transition:transform .25s,box-shadow .25s}
+.post-card:hover{transform:translateY(-3px);box-shadow:inset 0 0 0 1px rgba(185,154,91,.6),0 22px 40px -26px rgba(11,24,48,.4)}
+.post-card-tag{font-family:var(--sans);font-weight:700;font-size:.7rem;letter-spacing:.14em;text-transform:uppercase;color:var(--crimson)}
+.post-card h2{font-family:var(--serif);font-weight:700;font-size:1.4rem;line-height:1.25;color:var(--navy);margin:0}
+.post-card p{font-size:.98rem;line-height:1.6;color:var(--slate);margin:0;display:-webkit-box;-webkit-line-clamp:4;-webkit-box-orient:vertical;overflow:hidden}
+.post-card-more{margin-top:auto;display:inline-flex;align-items:center;gap:8px;font-family:var(--sans);font-weight:600;font-size:.92rem;color:var(--crimson)}
+.post-card-more svg{width:14px;height:14px}
+@media(max-width:640px){.post-body p{font-size:1.05rem}.post-body .post-lead{font-size:1.15rem}.post-q{padding:16px 18px}.post-cta{padding:24px 20px}}
+
+/* blog: compact hero aligned to the reading column */
+.svc-hero.post-hero{min-height:0;padding:clamp(48px,7vw,88px) 0 clamp(36px,5vw,56px)}
+.post-hero .svc-hero-inner{width:100%;max-width:700px;margin:0 auto;box-sizing:border-box;padding-left:0!important;padding-right:0!important}
+.post-hero .svc-hero-inner>div{padding:0!important;margin:0!important}
+@media(max-width:760px){.post-hero .svc-hero-inner{padding-left:24px!important;padding-right:24px!important}}
+.post-grid.post-grid--one{grid-template-columns:1fr;max-width:700px}
